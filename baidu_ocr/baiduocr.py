@@ -13,7 +13,7 @@ request_url = ""  #
 request_url = ""  # 
 request_url = ""  # 
 request_url = ""  # 
-request_url = "https://aip.baidubce.com/rest/2.0/solution/v1/iocr/recognise/finance"  # IOCR财会版
+# request_url = "https://aip.baidubce.com/rest/2.0/solution/v1/iocr/recognise/finance"  # IOCR财会版
 # request_url = "https://aip.baidubce.com/rest/2.0/solution/v1/iocr/recognise"  # IOCR通用版API文档
 # request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/intelligent_ocr"  # 智能结构化识别
 # request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/facade"  # 门脸文字识别
@@ -67,15 +67,15 @@ request_url = "https://aip.baidubce.com/rest/2.0/solution/v1/iocr/recognise/fina
 # request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general"  # 通用文字识别（标准含位置版）
 # request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic"  # 通用文字识别（标准版）
 # request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"  # 通用文字识别（高精度版）
-# request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate"  # 通用文字识别（高精度含位置版）
+request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate"  # 通用文字识别（高精度含位置版）
 
 # 二进制方式打开图片文件
 f = open('/media/em/4.0T/chejian/image/lstm/保单车船税大写2020-11-14/JHS282_合计(人民币大写):检壹元贰角零分.jpg', 'rb')
 # f = open('/media/em/4.0T/chejian/image/0206_D3Y696_LRH12R5D0C0000197___20201020___.jpg', 'rb')
 img = base64.b64encode(f.read())
 params = {"image":img}
-# access_token = '24.2018b6e872b97c5f3532ab4d62f70713.2592000.1621939560.282335-11271251'  # OCR
-access_token = '24.210ec0bc6252a531e900a2f9dfaf34e2.2592000.1621940020.282335-24063854'  # 所有接口的token
+access_token = '24.85af79556c0fbbda80f622b38867c1d4.2592000.1622971446.282335-24123873'  # 所有接口的token zsy
+# access_token = '24.210ec0bc6252a531e900a2f9dfaf34e2.2592000.1621940020.282335-24063854'  # 所有接口的token
 request_url = request_url + "?access_token=" + access_token
 headers = {'content-type': 'application/x-www-form-urlencoded'}
 response = requests.post(request_url, data=params, headers=headers)
